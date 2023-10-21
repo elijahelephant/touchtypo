@@ -5,15 +5,7 @@ series of points  where the user touched the screen,  compare these with the
 positions of the keys on the screen, and determine which words that the user was
 most likely trying to type.
 
-
-### Storage
-
-The `Heap` class has a single `Entry*` to hold all of its data. Fortunately, you
-can store binary heaps in arrays very efficiently.  The top of the heap lives at
-index zero, its left child lives at index one, and so on. The entry at index `i`
-has the following neighbors (if they exist):
-
-
+### The Heap
 
 There's a nice visualization on Wikipedia:
 <https://en.wikipedia.org/wiki/Binary_tree#Arrays>
