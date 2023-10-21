@@ -13,8 +13,7 @@ There's a nice visualization on Wikipedia:
 ### Percolation
 
 A min-heap has the property that every item is smaller than its children.  So if
-you add or remove items from your heap,  you'll need to move them around to keep
-this property.
+you add or remove items from the head, they move around.
 
 
 
@@ -53,9 +52,9 @@ function that translates sequences of points into probable words.
 ### Scoring
 
 For every sequence  of touch points,  we can calculate  a similarity score for a
-word of the same length.  To do this, first use the `QWERTY` map  in `Point.cpp`
-to look up the location of the letters in the word on a QWERTY keyboard. You now
-have two sequences of points:  one sequence of touch points, and one sequence of
+word of the same length. First I use the `QWERTY` map  in `Point.cpp`
+to look up the location of the letters in the word on a QWERTY keyboard. Now there is
+ two sequences of points:  one sequence of touch points, and one sequence of
 key locations.
 
 Then, calculate the Euclidean distance `d` between the first touch point and the
@@ -68,7 +67,7 @@ range from near-zero to one.  The higher the score, the better the match.
 
 ### Example
 
-  [wendy@neverland typo]$ ./helper.py | ./a.out /usr/share/dict/words
+  [johndoe@crib typo]$ ./helper.py | ./a.out /usr/share/dict/words
   > holster
    - 0.524: holster
    - 0.493: hoister
